@@ -10,7 +10,7 @@ export const projects: Project[] = [
     tags: ['Project', 'GitHub'],
     accent: 'violet',
     // GitHub repository for the completed PowerFlow project.
-    link: 'https://github.com/Teekay1702/powerflow.git',
+    link: 'https://powerflow-seven.vercel.app/',
   },
   {
     num: '02',
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     tags: ['Project', 'GitHub'],
     accent: 'amber',
     // GitHub repository for the completed Community Hub project.
-    link: 'https://github.com/Teekay1702/Community-Hub.git',
+    link: 'https://community-hub-m3vf.onrender.com/',
   },
 
   // TODO: Duplicate a project object above to add another completed project.
