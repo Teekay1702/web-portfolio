@@ -7,4 +7,5 @@ export interface Project {
   desc: string;
   tags: string[];
   accent: Accent;
+  link: string;
 }
