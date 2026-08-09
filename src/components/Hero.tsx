@@ -10,7 +10,7 @@ export default function Hero({ onNavigate }: Props) {
                 <div className="eyebrow">
                     <span /> AVAILABLE FOR OPPORTUNITIES
                 </div>
-                <h1>Building ideas<br />into <em>useful</em> software.</h1>
+                <h1><br /><em>Tokoloho Lekoro</em></h1>
                 <p className="intro">I am an aspiring programmer with a passion for developing innovative software using industry-standard technologies. I
                     demonstrate strong commitment to teamwork and effective code management, ensuring project success through
                     collaborative goal alignment.
@@ -27,7 +27,7 @@ export default function Hero({ onNavigate }: Props) {
                 <div className="portrait">
                     <div className="portrait-code">&lt;/&gt;
                     </div>
-                    <div className="portrait-name">TL<span>_</span>
+                    <div className="portrait-name">Tokoloho Lekoro<span>_</span>
                     </div>
                     <div className="floating f1">React.js</div>
                     <div className="floating f2">C#</div>
