@@ -1,4 +1,1 @@
-export interface IconProps {
-  name: keyof typeof import("../constants/icons").ICON_PATHS;
-  size?: number;
-}
+export type IconName = 'arrow' | 'github' | 'linkedin' | 'mail' | 'menu' | 'close' | 'code' | 'send' | 'check';

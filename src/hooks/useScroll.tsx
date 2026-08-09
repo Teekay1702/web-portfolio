@@ -1,24 +1,7 @@
-import { useCallback } from "react";
+import { useCallback } from 'react';
 
-export default function useScroll() {
-    return useCallback(
-        (
-            id: string,
-            onComplete?: () => void
-        ) => {
-            const element = document.getElementById(
-                id.toLowerCase()
-            );
-
-            if (!element) return;
-
-            element.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
-
-            onComplete?.();
-        },
-        []
-    );
+export function useScroll() {
+    return useCallback((target: string) => {
+        document.getElementById(target.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
+    }, []);
 }

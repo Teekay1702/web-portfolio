@@ -1,27 +1,8 @@
-import React from "react";
-import { ICON_PATHS } from "../constants/icons";
-import type { IconProps } from "../types/icon";
+import { iconPaths } from '../constants/icons';
+import type { IconName } from '../types/icon';
 
-const Icon = React.memo(function Icon({
-  name,
-  size = 18,
-}: IconProps) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.8}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      focusable="false"
-    >
-      <path d={ICON_PATHS[name]} />
-    </svg>
-  );
-});
+interface Props { name: IconName; size?: number }
 
-export default Icon;
+export default function Icon({ name, size = 18 }: Props) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={iconPaths[name]} /></svg>;
+}

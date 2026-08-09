@@ -1,26 +1,15 @@
-import Icon from "./Icon";
+import Icon from './Icon';
+import { PROFILE } from '../constants/profile';
 
-interface Props {
-    href: string;
-    icon: "github" | "linkedin";
-    children: React.ReactNode;
-}
-
-export default function SocialLink({
-    href,
-    icon,
-    children,
-}: Props) {
+export default function SocialLink() {
     return (
-        <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-        >
-            <Icon name={icon} />
-
-            {children}
-        </a>
+        <div className="socials">
+            <a href={PROFILE.github} target="_blank" rel="noreferrer">
+                <Icon name="github" /> GitHub
+            </a>
+            <a href={PROFILE.linkedin} target="_blank" rel="noreferrer">
+                <Icon name="linkedin" /> LinkedIn
+            </a>
+        </div>
     );
 }

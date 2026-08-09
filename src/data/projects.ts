@@ -5,35 +5,54 @@ export const projects: Project[] = [
     num: '01',
     title: 'PowerFlow',
     type: 'Software project',
-    // TODO: Update this summary and tags with the final PowerFlow project details.
-    desc: 'A completed software project focused on creating a practical, reliable digital experience.',
+    desc: 'PowerFlow is a backup power solutions system. Provides employee dashboards, electrical load calculations, quotation management, customer administration, and manager/admin employee onboarding portals.',
     tags: ['Project', 'GitHub'],
     accent: 'violet',
-    // GitHub repository for the completed PowerFlow project.
-    link: 'https://powerflow-seven.vercel.app/',
+    link: 'https://github.com/Teekay1702/powerflow.git',
   },
   {
     num: '02',
     title: 'TrendLoop',
     type: 'Mobile application',
-    desc: 'A Flutter mobile app for a peer-to-peer retail marketplace, with separate buyer and seller experiences.',
+    desc: 'A modern cross-platform retail marketplace starter application inspired by fast-fashion discovery experiences, redesigned as a peer-to-peer marketplace where anyone can browse, buy, register, create a seller shop, and list products.',
     tags: ['Flutter', 'Dart', 'Provider'],
     accent: 'mint',
-    // GitHub repository for the completed TrendLoop project.
     link: 'https://github.com/Teekay1702/trendloop.git',
   },
   {
     num: '03',
     title: 'Community Hub',
     type: 'Software project',
-    // TODO: Update this summary and tags with the final Community Hub project details.
     desc: 'A completed community-focused software project available to explore on GitHub.',
     tags: ['Project', 'GitHub'],
     accent: 'amber',
-    // GitHub repository for the completed Community Hub project.
-    link: 'https://community-hub-m3vf.onrender.com/',
+    link: 'https://github.com/Teekay1702/Community-Hub.git',
   },
-
-  // TODO: Duplicate a project object above to add another completed project.
-  // Remember to use a unique `num`, update the project information, and add its `link`.
+  {
+    num: '04',
+    title: 'Book Finder',
+    type: 'Software project',
+    desc: 'Book Finder is a React-based application that allows users to search for books using the Google Books API. Users can browse books, view details, access more information about each book,, read the book online if it is available and leave a review for each book',
+    tags: ['Project', 'GitHub'],
+    accent: 'violet',
+    link: 'https://github.com/Teekay1702/Book-App.git',
+  },
+  {
+    num: '05',
+    title: 'TodoAPI',
+    type: 'Software project',
+    desc: 'This is a controller-based RESTful API built using C# and .NET, designed to manage a To-Do list. It follows the MVC (Model-View-Controller) pattern and uses Microsoft.EntityFrameworkCore.InMemory for temporary data storage.',
+    tags: ['Project', 'GitHub'],
+    accent: 'mint',
+    link: 'https://github.com/Teekay1702/TodoApi.git',
+  },
+  {
+    num: '06',
+    title: 'News App',
+    type: 'Software project',
+    desc: 'This project is a React-based news app that allows users to view the latest news from different categories such as General, Business, Technology, Health, and more. The app fetches news headlines from a third-party news API and displays them in a clean, responsive grid format.',
+    tags: ['Project', 'GitHub'],
+    accent: 'amber',
+    link: 'https://github.com/Teekay1702/News-App.git',
+  },
 ];

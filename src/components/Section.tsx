@@ -1,31 +1,12 @@
-import React from "react";
+import type { ReactNode } from 'react';
 
-interface SectionProps {
-  id: string;
-  label: string;
-  children: React.ReactNode;
-  className?: string;
+interface Props {
+  id?: string;
+  className?:
+  string;
+  children: ReactNode
 }
 
-export default function Section({
-  id,
-  label,
-  children,
-  className = "",
-}: SectionProps) {
-  return (
-    <section
-      id={id}
-      className={`section ${className}`}
-      aria-labelledby={`${id}-heading`}
-    >
-      <div className="section-label">
-        {label}
-      </div>
-
-      <div id={`${id}-heading`}>
-        {children}
-      </div>
-    </section>
-  );
+export default function Section({ id, className = '', children }: Props) {
+  return <section id={id} className={`section ${className}`.trim()}>{children}</section>;
 }

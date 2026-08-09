@@ -1,6 +1,1 @@
-export const NAVIGATION = [
-  "About",
-  "Work",
-  "Experience",
-  "Contact",
-] as const;
+export const navigation = ['About', 'Work', 'Experience', 'Contact'] as const;

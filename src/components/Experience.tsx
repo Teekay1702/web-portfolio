@@ -1,54 +1,24 @@
-import { useMemo } from "react";
-
-import Section from "./Section";
-import ExperienceCard from "./ExperienceCard";
-
-import { roles } from "../data/roles";
+import Section from './Section';
+import { roles } from '../data/roles';
 
 export default function Experience() {
-    const renderedRoles = useMemo(
-        () =>
-            roles.map((role, index) => (
-                <ExperienceCard
-                    key={`${role.org}-${index}`}
-                    role={role}
-                    index={index}
-                />
-            )),
-        []
-    );
-
-    return (
-        <Section
-            id="experience"
-            label="03 / EXPERIENCE"
-        >
-            <div className="experience-wrap">
-
-                <div className="experience-heading">
-
-                    <h2>
-                        Learning by
-                        <br />
-                        <em>building.</em>
-                    </h2>
-
-                    <p>
-                        Every opportunity has strengthened
-                        my ability to design software,
-                        solve problems and collaborate
-                        with development teams.
-                    </p>
-
-                </div>
-
-                <div className="roles">
-
-                    {renderedRoles}
-
-                </div>
-
+    return <Section id="experience" className="experience">
+        <div className="section-label">03 / EXPERIENCE</div>
+        <div className="experience-wrap">
+            <h2>Learning by<br /><em>making.</em></h2>
+            <div className="roles">{roles.map((role, index) =>
+                <article className="role" key={role.org}>
+                    <div className="role-date">{role.date}</div>
+                    <div>
+                        <h3>{role.role}</h3>
+                        <h4>{role.org}</h4>
+                        <ul>{role.points.map(point =>
+                            <li key={point}>{point}</li>)}
+                        </ul>
+                    </div>
+                    <span className="role-no">0{index + 1}</span>
+                </article>)}
             </div>
-        </Section>
-    );
+        </div>
+    </Section>
 }

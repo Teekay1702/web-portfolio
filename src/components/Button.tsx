@@ -1,31 +1,7 @@
-import React from "react";
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  icon?: React.ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
-}
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> { children: ReactNode }
 
-export default function Button({
-  children,
-  icon,
-  variant = "primary",
-  className = "",
-  ...props
-}: ButtonProps) {
-  return (
-    <button
-      className={`btn btn-${variant} ${className}`}
-      {...props}
-    >
-      <span>{children}</span>
-
-      {icon && (
-        <span className="btn-icon">
-          {icon}
-        </span>
-      )}
-    </button>
-  );
+export default function Button({ children, className = '', ...props }: Props) {
+  return <button className={`primary ${className}`.trim()} {...props}>{children}</button>;
 }
