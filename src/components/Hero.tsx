@@ -43,7 +43,7 @@ export default function Hero({ onNavigate }: Props) {
             </div>
         </section>
         <section className="marquee">
-            <div>REACT <b>✦</b> TYPESCRIPT <b>✦</b> NODE.JS <b>✦</b> FLUTTER <b>✦</b> DJANGO <b>✦</b> REACT <b>✦</b> TYPESCRIPT <b>✦</b>
+            <div>REACT <b>✦</b> NODE.JS <b>✦</b> FLUTTER <b>✦</b> DJANGO <b>✦</b> C# <b>✦</b> TYPESCRIPT <b>✦</b> FIREBASE <b>✦</b> SUPABASE <b>✦</b> GIT <b>✦</b> PRISMA <b>✦</b>
             </div>
         </section>
     </>
