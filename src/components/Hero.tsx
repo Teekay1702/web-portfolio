@@ -1,9 +1,12 @@
 import Button from './Button'; import Icon from './Icon';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
     onNavigate: (target: string) => void
 }
 export default function Hero({ onNavigate }: Props) {
+    const routerNavigate = useNavigate();
+
     return <>
         <section className="hero">
             <div className="hero-copy">
@@ -17,7 +20,9 @@ export default function Hero({ onNavigate }: Props) {
                 </p>
                 <div className="hero-actions">
                     <Button onClick={() => onNavigate('work')}>See my work <Icon name="arrow" /></Button>
-                    <Button onClick={() => window.open('/cv.html', '_blank')}>View my CV <Icon name="arrow" /></Button>
+                    <Button onClick={() => routerNavigate('/cv')}>
+                        View my CV <Icon name="arrow" />
+                    </Button>
                     <a className="text-link" href="mailto:tokoloho57@gmail.com">Get in touch <Icon name="arrow" /></a>
                 </div>
             </div>
