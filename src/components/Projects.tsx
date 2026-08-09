@@ -1,42 +1,13 @@
-import { useMemo } from "react";
-
-import Section from "./Section";
-import ProjectCard from "./ProjectCard";
-
-import { projects } from "../data/projects";
+import Section from './Section';
+import ProjectCard from './ProjectCard';
+import { projects } from '../data/projects';
 
 export default function Projects() {
-    const renderedProjects = useMemo(
-        () =>
-            projects.map((project) => (
-                <ProjectCard
-                    key={project.num}
-                    project={project}
-                />
-            )),
-        []
-    );
-
-    return (
-        <Section
-            id="work"
-            label="02 / SELECTED WORK"
-        >
-            <div className="section-head">
-
-                <p>
-                    A few projects where design,
-                    engineering and purpose come
-                    together.
-                </p>
-
-            </div>
-
-            <div className="project-list">
-
-                {renderedProjects}
-
-            </div>
-        </Section>
-    );
+    return <Section id="work" className="work">
+        <div className="section-head">
+            <div className="section-label">02 / SELECTED WORK</div>
+            <p>A few projects where design, engineering and purpose come together.</p>
+        </div>
+        <div className="project-list">{projects.map(project => <ProjectCard project={project} key={project.num} />)}</div>
+    </Section>
 }
